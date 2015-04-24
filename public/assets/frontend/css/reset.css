@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0; padding:0;}
+.body{ background:#F6FAFB;}
+.comWidth{width:1000px; margin:0 auto; overflow:hidden;}
+.overH{ overflow:hidden;}
+a{ text-decoration:none;}
+ul{ list-style:none;}
+img{ border:0;}
+.fl{ float:left;}
+.fr{ float:right;}
+i,em{font-style:normal;}
+table{ border-collapse:collapse; border-spacing:0;}
+.noBoder{ border:0 !important;}
+img{border:0;}
+.noLeftMargin{ margin-left:0 !important;}

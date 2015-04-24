@@ -1,0 +1,30 @@
+<?php echo $this->tag->stylesheetLink('assets/frontend/css/msgbox.css'); ?>
+<?php echo $this->tag->stylesheetLink('assets/frontend/css/login.css'); ?>
+<?php echo $this->tag->javascriptInclude('assets/frontend/js/jquery-1.6.2.min.js'); ?>
+<?php echo $this->tag->javascriptInclude('assets/frontend/js/PlaceHolder.js'); ?>
+<?php echo $this->tag->javascriptInclude('assets/frontend/js/msgbox.js'); ?>
+<?php echo $this->tag->javascriptInclude('assets/frontend/js/login.js'); ?>
+<div class="login">
+    <img src="<?php echo $this->url->get(); ?>assets/backend/images/logobg.png" style="height: 80px;" />
+    <div style="margin: 20px 0px; height: 210px;">
+        <div class="txtdiv">
+            <input id="username" name="username" type="text" placeholder="用户名" class="input normal" />
+        </div>
+        <div class="txtdiv">
+            <input id="password" name="password" type="password" placeholder="密码" class="input normal" />
+        </div>
+        <div class="txtdiv">
+            <input id="code" name="code" type="text" placeholder="验证码" class="input normal" />
+        </div>
+        <div class="txtdiv">
+            <span style="float: right"><a style="color: #999; text-decoration: none;padding-right: 10" href="javascript:ZENG.msgbox.show('暂未开放！请联系管理员！', 5, 2000);">忘记密码？</a></span>
+        </div>
+        <div class="txtdiv">
+            <span style="text-align: center;margin: 0 auto"><img src="<?php echo $this->url->get(); ?>login/code" onClick="this.src='<?php echo $this->url->get(); ?>login/code?'+Math.random()" style="width: 280px;height: 60px;" id="imageCode"></span>
+        </div>
+        <div class="txtdiv">
+            <span style="float: right"><input id="BtnLogin" class="btn" type="button" value=" 登  录 " /></span>
+        </div>
+    </div>
+    <div style="color: #8d0606; width: 280px; margin: 0px auto;align-content: center; border-top: 1px dotted #CCC; padding: 10px; text-align: left;"></div>
+</div>

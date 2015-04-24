@@ -1,0 +1,27 @@
+{{ assets.outputCss('extcss') }}
+{{ assets.outputJs('extjs') }}
+
+<link rel="stylesheet" type="text/css" id="ThemeCssName" />
+<script type="text/javascript">
+    if (Cookies.get("ThemeCss") != null)
+    {
+        document.getElementById('ThemeCssName').href = Cookies.get("ThemeCss");
+    }
+    else
+    {
+        Cookies.set("ThemeCss","{{ url() }}extjs/resources/css/ext-all-crisp.css");
+        document.getElementById('ThemeCssName').href = Cookies.get("ThemeCss")
+    };
+</script>
+
+<style type="text/css">
+    #wmcheader{
+        background-color: #EEE;
+        border-bottom: 1px solid #CCC;
+    }
+    #wmcheader .x-toolbar-text{
+        color:#333;
+    }
+</style>
+
+{{ content() }}

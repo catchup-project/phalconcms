@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <?php echo $this->tag->getTitle(); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your invoices">
+    <meta name="author" content="Phalcon Team">
+    <script type="application/javascript">var base_url = "<?php echo $this->url->get(); ?>"</script>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->url->get(); ?>static/ext/examples/portal/portal.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->url->get(); ?>static/ext/examples/shared/example.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->url->get(); ?>static/css/forestry-style.css"  />
+    <script type="text/javascript" src="<?php echo $this->url->get(); ?>static/ext/examples/shared/include-ext.js"></script>
+    <script type="text/javascript" src="<?php echo $this->url->get(); ?>static/ext/locale/ext-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="<?php echo $this->url->get(); ?>static/ext/examples/shared/options-toolbar.js"></script>
+    <script type="text/javascript" src="<?php echo $this->url->get(); ?>static/ext/examples/shared/examples.js"></script>
+    <script type="text/javascript">
+        var userName = 'admin';
+        var globalRoleId = '1';
+        var appBaseUri = '<?php echo $this->url->get(); ?>';
+        var appName = '通用后台管理系统';
+        Ext.Loader.setPath('Ext.app', appBaseUri+'static/ext/examples/portal/classes');
+        Ext.Loader.setPath('Ext.ux', appBaseUri+'static/ext/examples/ux');
+        Ext.Loader.setPath('Forestry.app', appBaseUri+'static/ext/examples/portal');
+    </script>
+    <script type="text/javascript">
+        Ext.require([
+            'Ext.layout.container.*',
+            'Ext.resizer.Splitter',
+            'Ext.fx.target.Element',
+            'Ext.fx.target.Component',
+            'Ext.window.Window',
+            'Ext.app.Portlet',
+            'Ext.app.PortalColumn',
+            'Ext.app.PortalPanel',
+            'Ext.app.Portlet',
+            'Ext.app.PortalDropZone'
+        ]);
+    </script>
+</head>
+<body>
+<div class="content">
+    <?php echo $this->getContent(); ?>
+</div>
+</body>
+</html>
